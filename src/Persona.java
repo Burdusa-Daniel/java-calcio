@@ -25,15 +25,8 @@ public class Persona {
     public void setNome(String nome) {
         this.nome = nome;
     }
-   /* public int etaPersona(){
-        Period anni = Period.between(dataNascita,LocalDate.now());
-        return anni.getYears();
-    }*/
-
     @Override
     public String toString() {
-        return
-                "eta=" + eta +
-                " nome=" + nome  ;
+        return  "nome =" +" "+ nome +"\neta =" +" "+ eta ;
     }
 }

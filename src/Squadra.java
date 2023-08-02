@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 public class Squadra {
-    private ArrayList<Giocatore> giocatore;
-    private ArrayList<Allenatore> allenatore;
-
+    private ArrayList<Giocatore> giocatori;
     public Squadra() {
-        this.giocatore=new ArrayList<>();
-        this.allenatore=new ArrayList<>();
+        this.giocatori=new ArrayList<>();
+    }
+    public void addGiocatore( Giocatore giocatore){
+        giocatori.add(giocatore);
     }
 }

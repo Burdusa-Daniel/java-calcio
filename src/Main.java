@@ -1,7 +1,8 @@
-import java.util.Random;
 
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
+
          String[] NOMI_COGNOMI_GIOCATORI = {
                 "Marco Rossi", "Alessio Bianchi", "Lorenzo Russo", "Simone Ferrara", "Andrea Martini",
                 "Luca Rossetti", "Davide Fontana", "Giovanni Ricci", "Filippo Bellini", "Nicolas De Luca",
@@ -25,25 +26,59 @@ public class Main {
                 "Luigi Esposito", "Domenico Vitale", "Antonio De Angelis", "Mario Barbieri", "Giovanni Marchetti",
                 "Francesco Russo", "Raffaele Martini", "Federico Coppola", "Emanuele Bellini", "Alessio Ricci"
         };
-         //nomi dei giocatori e allenatori.
-        Random random= new Random();
-        int indiceCasuale1= random.nextInt(0, NOMI_COGNOMI_GIOCATORI.length);
-        String nomeGiocatore = NOMI_COGNOMI_GIOCATORI[indiceCasuale1];
-        System.out.println(nomeGiocatore);
-        int indiceCasuale2= random.nextInt(0, NOMI_COGNOMI_GIOCATORI.length);
-        String nomeAllenatore= NOMI_COGNOMI_GIOCATORI[indiceCasuale2];
-        System.out.println(nomeAllenatore);
-        //eta
-        int eta= random.nextInt(16,41);
-        //numero maglia
-        int numeroMaglia= random.nextInt(1,100);
-        System.out.println(numeroMaglia);
-        //ruoli
-        String[] ruoli={"POR","DC","DC","TD","TS","CM","CM","CM","AD","AS","ATT"};
-        int posizione= (random.nextInt(0, ruoli.length));
-        String ruoloInCampo=ruoli[posizione];
-        System.out.println( ruoli[posizione]);
-        Giocatore giocatore= new Giocatore(eta,nomeGiocatore,numeroMaglia,ruoloInCampo);
-        System.out.println(giocatore.toString());
+        Random random = new Random();
+
+        Giocatore giocatore=null;
+
+        //11 giocatori
+
+         for (int i = 0 ; i<11;i++){
+
+             //nome gicatore
+
+            int indiceCasuale1 = random.nextInt(0, NOMI_COGNOMI_GIOCATORI.length);
+            String nomeGiocatore = NOMI_COGNOMI_GIOCATORI[indiceCasuale1];
+
+            //eta
+
+            int eta = random.nextInt(16, 41);
+
+            //numeromaglia
+
+            int numeroMaglia = random.nextInt(1, 100);
+
+            //ruoli
+
+            String[] ruoli = {"POR", "DC", "DC", "TD", "TS", "CM", "CM", "CM", "AD", "AS", "ATT"};
+            int posizione = (random.nextInt(0, ruoli.length));
+            String ruoloInCampo = ruoli[posizione];
+
+            //stampa giocatore
+
+            System.out.println("Giocatore");
+            giocatore = new Giocatore(eta, nomeGiocatore, numeroMaglia, ruoloInCampo);
+            System.out.println(giocatore.toString());
+        }
+
+         //nome allenatore
+
+        int indiceCasuale2 = random.nextInt(0, NOMI_COGNOMI_GIOCATORI.length);
+        String nomeAllenatore = NOMI_COGNOMI_GIOCATORI[indiceCasuale2];
+
+        //eta allenatore
+
+        int etaAllenatore = random.nextInt(30, 70);
+
+        //tattica allenatore
+
+        String[] tattica = {"tiki taka ", "possesso palla", "palla lunga", "rientrare in difesa", "parcheggia il bus"};
+        int a = random.nextInt(0, tattica.length);
+        String stileDiGioco = tattica[a];
+
+        //allenatore
+
+        System.out.println("L'allenatore è:");
+        Allenatore allenatore = new Allenatore(etaAllenatore, nomeAllenatore, stileDiGioco);
+        System.out.println(allenatore.toString());
     }
 }
