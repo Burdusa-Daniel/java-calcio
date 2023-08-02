@@ -33,9 +33,17 @@ public class Main {
         int indiceCasuale2= random.nextInt(0, NOMI_COGNOMI_GIOCATORI.length);
         String nomeAllenatore= NOMI_COGNOMI_GIOCATORI[indiceCasuale2];
         System.out.println(nomeAllenatore);
+        //eta
+        int eta= random.nextInt(16,41);
+        //numero maglia
         int numeroMaglia= random.nextInt(1,100);
         System.out.println(numeroMaglia);
+        //ruoli
         String[] ruoli={"POR","DC","DC","TD","TS","CM","CM","CM","AD","AS","ATT"};
-
+        int posizione= (random.nextInt(0, ruoli.length));
+        String ruoloInCampo=ruoli[posizione];
+        System.out.println( ruoli[posizione]);
+        Giocatore giocatore= new Giocatore(eta,nomeGiocatore,numeroMaglia,ruoloInCampo);
+        System.out.println(giocatore.toString());
     }
 }

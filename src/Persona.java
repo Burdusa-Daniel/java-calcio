@@ -2,20 +2,20 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class Persona {
-    private LocalDate dataNascita;
+    private int eta;
     private String nome;
 
-    public Persona(LocalDate dataNascita, String nome) {
-        this.dataNascita = dataNascita;
+    public Persona(int eta, String nome) {
+        this.eta = eta;
         this.nome = nome;
     }
 
-    public LocalDate getEta() {
-        return dataNascita;
+    public int getEta() {
+        return eta;
     }
 
-    public void setEta(LocalDate dataNascita) {
-        this.dataNascita = dataNascita;
+    public void setEta(int eta) {
+        this.eta = eta;
     }
 
     public String getNome() {
@@ -25,8 +25,15 @@ public class Persona {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public int etaPersona(){
+   /* public int etaPersona(){
         Period anni = Period.between(dataNascita,LocalDate.now());
         return anni.getYears();
+    }*/
+
+    @Override
+    public String toString() {
+        return
+                "eta=" + eta +
+                " nome=" + nome  ;
     }
 }
