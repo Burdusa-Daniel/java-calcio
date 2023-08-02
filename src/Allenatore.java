@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 
 public class Allenatore extends Persona{
     private String tattica;
