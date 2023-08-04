@@ -106,6 +106,9 @@ public class Main {
         System.out.println("l'arbitro è :");
         Arbitro arbitro= new Arbitro(etaAlbiltro,nomeArbitro,arbitroRuolo);
         System.out.println(arbitro.toString());
+
+        //partita
+
         Squadra squadra1= new Squadra("FCBoccaGrande");
         Squadra squadra2= new Squadra("FCBoccaPiccola");
         boolean papi=false;
