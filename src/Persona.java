@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Persona {
     private int eta;
@@ -27,4 +30,5 @@ public class Persona {
     public String toString() {
         return  "nome =" +" "+ nome +"\neta =" +" "+ eta ;
     }
+
 }

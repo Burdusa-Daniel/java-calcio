@@ -1,5 +1,9 @@
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -80,5 +84,38 @@ public class Main {
         System.out.println("L'allenatore è:");
         Allenatore allenatore = new Allenatore(etaAllenatore, nomeAllenatore, stileDiGioco);
         System.out.println(allenatore.toString());
+
+        //arbitro
+
+        //etaarbitro
+
+        int etaAlbiltro = random.nextInt(30, 45);
+
+        //nomearbitro
+
+        int indiceCasuale3 = random.nextInt(0, NOMI_COGNOMI_GIOCATORI.length);
+        String nomeArbitro = NOMI_COGNOMI_GIOCATORI[indiceCasuale3];
+
+        //ruoloarbitro
+
+        String[] ruoloArbitro = {"principale","secondo","guardalinee","principale VAR", "secondo VAR"};
+        int b = random.nextInt(0, ruoloArbitro.length);
+        String arbitroRuolo = ruoloArbitro[b];
+
+        //stampaarbitro
+        System.out.println("l'arbitro è :");
+        Arbitro arbitro= new Arbitro(etaAlbiltro,nomeArbitro,arbitroRuolo);
+        System.out.println(arbitro.toString());
+        Squadra squadra1= new Squadra("FCBoccaGrande");
+        Squadra squadra2= new Squadra("FCBoccaPiccola");
+        boolean papi=false;
+        int gol= 0;
+        Partita finaleUCL=new Partita(squadra1,squadra2,arbitro,papi,gol);
+        finaleUCL.iniziaPartita();
+        finaleUCL.golmarcato();
+        finaleUCL.golmarcato();
+        finaleUCL.golmarcato();
+        finaleUCL.finePartita();
+
     }
 }
