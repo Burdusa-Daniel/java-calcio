@@ -119,6 +119,5 @@ public class Main {
         finaleUCL.golmarcato();
         finaleUCL.golmarcato();
         finaleUCL.finePartita();
-
     }
 }
